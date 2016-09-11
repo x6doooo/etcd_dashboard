@@ -1,0 +1,23 @@
+[env]
+mode = "debug"
+
+[server]
+host = "127.0.0.1"
+port = 54321
+
+[log]
+file = "/var/log/etcd_dashboard.log"
+max_line = 10000
+backups = 9
+
+[[etcd]]
+name = "vm01"
+addr = "127.0.0.1:9537"
+
+[[etcd]]
+name = "vm02"
+addr = "127.0.0.1:9538"
+
+[[etcd]]
+name = "vm03"
+addr = "127.0.0.1:9539"
