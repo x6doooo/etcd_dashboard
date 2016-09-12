@@ -1,0 +1,29 @@
+//
+   Created by yangdongxu on 16/9/11.
+
+.sub-views
+    table.table.table-bordered.table-condensed.list-table
+        thead
+            tr
+                th Name
+                th ID
+                th Addr
+                th peerURLs
+                th clientURLs
+                th Version
+                th DbSize
+                th Leader
+                th RaftIndex
+                th RaftTerm
+        tbody
+            tr(ng-repeat='item in vm.list')
+                td {{ item.Member.name }}
+                td {{ item.Member.ID }}
+                td {{ item.AddrForDashboard }}
+                td(ng-bind-html='item.peers')
+                td(ng-bind-html='item.clients')
+                td {{ item.Version }}
+                td {{ item.DbSize }}
+                td {{ vm.id2name[item.Leader] }}
+                td {{ item.RaftIndex }}
+                td {{ item.RaftTerm }}

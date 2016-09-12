@@ -1,0 +1,9 @@
+//
+   Created by yangdongxu on 16/9/10.
+
+.nav-bar
+    h1 Etcd Dashboard
+    ul
+        li(ng-repeat='item in nav.list')
+            a(href='javascript:;', ng-click='go(item)')
+                |{{item.title}}
